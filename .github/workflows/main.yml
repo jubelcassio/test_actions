@@ -23,9 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install pipenv
           pipenv install
-      - name: Testing
-        run: |
-          pipenv install --dev
-          pipenv run test-ci
+      # - name: Testing
+      #   run: |
+      #     pipenv install --dev
+      #     pipenv run test-ci
       - name: Coverage
-        run: pipenv run coverage
+        run: python -m pytest --cache-clear --cov=. tests
