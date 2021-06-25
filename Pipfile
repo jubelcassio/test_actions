@@ -18,3 +18,4 @@ python_version = "3.9"
 
 [scripts]
 test-ci = "python -m pytest tests/"
+coverage = "python -m pytest --cache-clear --cov=app tests/ > pytest-coverage.txt"
