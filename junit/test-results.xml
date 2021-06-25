@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="0.083" timestamp="2021-06-25T18:28:34.951758" hostname="jubel-desktop"><testcase classname="tests.test_a.TestSuccess" name="test_success" time="0.001" /><testcase classname="tests.test_a.TestFailure" name="test_failure" time="0.001"><failure message="assert False">self = &lt;test_a.TestFailure object at 0x7f53ad436550&gt;
+
+    def test_failure(self):
+&gt;       assert False
+E       assert False
+
+tests/test_a.py:7: AssertionError</failure></testcase></testsuite></testsuites>
