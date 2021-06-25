@@ -28,4 +28,4 @@ jobs:
       #     pipenv install --dev
       #     pipenv run test-ci
       - name: Coverage
-        run: python -m pytest --cache-clear --cov=. tests
+        run: pipenv run python -m pytest --cache-clear --cov=. tests
