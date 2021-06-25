@@ -17,4 +17,4 @@ pdoc = "==0.4.1"
 python_version = "3.9"
 
 [scripts]
-test-ci = "python -m pytest tests/ --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html"
+test-ci = "python -m pytest tests/"
