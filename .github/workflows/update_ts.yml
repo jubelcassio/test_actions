@@ -1,0 +1,23 @@
+name: update_ts
+
+on:
+  push:
+    tags: "release"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Update the timestamp file
+        run: date >> timestamp.txt && cat timestamp.txt
+      - name: Setup github remote
+        run: git remote set-url origin https://github.com/jubelcassio/test_actions.git
+      - name: add Files
+        run: git add .
+      - name: commit
+        run: git commit -m "Auto updating timestamp.txt"
+      - name: push to main
+        run: git push origin HEAD:test
