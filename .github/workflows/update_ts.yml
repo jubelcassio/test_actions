@@ -2,7 +2,7 @@ name: update_ts
 
 on:
   push:
-    tags: "release"
+    tags: "release*"
   workflow_dispatch:
 
 jobs:
