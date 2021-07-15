@@ -1,8 +1,10 @@
 name: update_ts
 
 on:
-  push:
-    tags: "release*"
+  pull_request:
+    branch: "main"
+    types: [closed]
+
   workflow_dispatch:
 
 jobs:
