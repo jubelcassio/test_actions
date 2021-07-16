@@ -15,4 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: print github context
-        run: printf ${{ github }}
+        run: echo ${{ github }}
