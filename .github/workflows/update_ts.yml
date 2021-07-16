@@ -1,9 +1,8 @@
 name: update_ts
 
 on:
-  pull_request:
+  push:
     branch: "main"
-    types: [closed]
 
   workflow_dispatch:
 
