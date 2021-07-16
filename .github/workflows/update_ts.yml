@@ -12,11 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
       - name: Update the timestamp file
         run: date >> timestamp.txt && cat timestamp.txt
-
       - name: Commit report
         run: |
           echo {{ ref }} $ref
