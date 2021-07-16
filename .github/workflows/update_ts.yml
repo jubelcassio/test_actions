@@ -1,7 +1,7 @@
 name: update_ts
 
 on:
-  push:
+  pull_request:
     branch: "main"
 
   workflow_dispatch:
@@ -12,16 +12,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
       - name: Update the timestamp file
         run: date >> timestamp.txt && cat timestamp.txt
-
       - name: Commit report
         run: |
           echo {{ ref }} $ref
-          git config --global user.name 'Jubel Cassio'
-          git config --global user.email 'jubelcassioverridasilva@gmail.com'
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add .
           git commit -am "Automated report"
           git push
