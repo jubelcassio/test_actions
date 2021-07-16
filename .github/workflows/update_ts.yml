@@ -2,7 +2,7 @@ name: update_ts
 
 on:
   pull_request:
-    branch: "main"
+    branch: [main]
     types: [closed]
 
   workflow_dispatch:
