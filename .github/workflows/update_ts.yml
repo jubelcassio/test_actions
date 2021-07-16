@@ -12,13 +12,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
       - name: Update the timestamp file
         run: date >> timestamp.txt && cat timestamp.txt
       - name: Commit report
         run: |
-          echo {{ ref }} $ref
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "jubelcassioverridasilva@github.com"
+          git config --local user.name "Jubel Cassio"
           git add .
-          git commit -am "Automated report"
+          git commit -am "Automated Report"
           git push
