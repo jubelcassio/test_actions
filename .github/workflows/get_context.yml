@@ -14,5 +14,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Update the timestamp file
-        run: printf ${{ github.actor }}
+      - name: print github context
+        run: printf ${{ github }}
