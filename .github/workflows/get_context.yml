@@ -1,4 +1,4 @@
-name: update_ts
+name: get_context
 
 on:
   pull_request:
