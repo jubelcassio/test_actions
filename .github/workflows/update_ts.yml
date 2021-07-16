@@ -1,7 +1,7 @@
 name: update_ts
 
 on:
-  push:
+  pull_request:
     branch: "main"
 
   workflow_dispatch:
@@ -20,8 +20,8 @@ jobs:
       - name: Commit report
         run: |
           echo {{ ref }} $ref
-          git config --global user.name 'Jubel Cassio'
-          git config --global user.email 'jubelcassioverridasilva@gmail.com'
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add .
           git commit -am "Automated report"
           git push
